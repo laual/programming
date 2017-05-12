@@ -4,17 +4,18 @@ int main (void)
 {
 	int nblanks,ntabs,nlines;
 	int c;
-	nblanks = ntabs = nlines = 0;
+	nblanks = 0;
+	ntabs = 0;
+	nlines = 0;
 	c = 0;
-	while ((c=getchar()) != EOF)
+	while ((c = getchar()) != EOF)
 		if (c == ' ')
-			++nblanks;
+			nblanks++;
 		else if (c == '\t')
-			++ntabs;
-		else (c == '\n')
-			++nlines;
-	printf("Number of blanks %d\n\
-	    Number of tabs %d\n \
-	    Number of new lines %d\n", nblanks, ntabs, nlines);
+			ntabs++;
+		else if (c == '\n')
+			nlines++;
+		++c;
+	printf("Number of blanks %d\nNumber of tabs %d\nNumber of new lines %d\n", nblanks, ntabs, nlines);
 	return 0;
 }
