@@ -18,11 +18,10 @@ void	ft_putnbr(int numbera)
 {
     int numberb;
     
-    while (numbera != 0)
+    while(numbera > 10)
     {
 	numberb = numbera % 10;
-	ft_putchar('0'+numberb);
-	numbera = numbera / 10;
+	ft_putchar('0' + numberb);
+	ft_putnbr(numbera / 10);
     }
-    ft_putchar('\n');
 }
