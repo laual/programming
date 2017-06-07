@@ -1,0 +1,53 @@
+#include <unistd.h>
+
+void	ft_print_comb2(void);
+
+void	ft_putchar(char c)
+{
+    write(1, &c, 1);
+}
+
+int	main(void)
+{
+    ft_print_comb2();
+    return (0);
+}
+
+void	ft_print_comb2(void)
+{
+    int prem_dizaine;
+    int	prem_unite;
+    int sec_dizaine;
+    int sec_unite;
+
+    prem_dizaine = '0';
+    while (prem_dizaine <= '9')
+    {
+	prem_unite = '0';
+	while (prem_unite <= '9')
+	{
+	    sec_dizaine = '0';
+	    while (sec_dizaine <= '9')
+	    {
+		sec_unite = '0';
+		while (sec_unite <= '9')
+		{
+		    if (!(prem_unite == sec_unite))
+		    {
+			ft_putchar(prem_dizaine);
+			ft_putchar(prem_unite);
+			ft_putchar(' ');
+			ft_putchar(sec_dizaine);
+			ft_putchar(sec_unite);
+			ft_putchar(',');
+			ft_putchar(' ');
+		    }
+		    sec_unite++;
+		}
+		sec_dizaine++;
+	    }
+	    prem_unite++;
+	}
+	prem_dizaine++;
+    }
+}

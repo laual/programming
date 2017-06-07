@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main ()
+{
+	int c;
+	int nmbr_chars;
+
+	while ((c=getchar()) != EOF) {
+		while ( c != ' ' ) {
+			putchar('|');
+		}
+	}
+	return 0;
+}

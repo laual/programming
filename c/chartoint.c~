@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int count_lines(void);
+
+int
+main()
+{
+	while ((c = getchar()) != EOF) {
+	}
+}
+
+int
+count_lines()
+{
+	if (c == '\n')
+		++number_of_lines;
+}
+
+int
+count_char()
+{
+	if (c == '

@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+	int c;
+	while ((c = getchar()) != EOF) {
+		if (c == \t)
+			putchar('\t');
+		elif (c == \b)
+			putchar('\b');
+		elif (c == \\)
+			putchar('\\');
+		putchar(c);
+	}
+	return 0;
+}
